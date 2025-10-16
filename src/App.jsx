@@ -20,21 +20,22 @@ const App = () => {
   }, [darkMode]);
 
   return (
-    <div className=" bg-white text-black dark:bg-gray-900 dark:text-white">
-      <div className="h-screen w-[50%] mx-[25%] flex flex-col items-center transition-all duration-300">
-        <Header></Header>
-        <About></About>
-        <Experience></Experience>
+    <div className="min-h-screen w-full bg-white text-black dark:bg-gray-900 dark:text-white transition-all duration-300 flex justify-center">
+      <div className="w-[90%] md:w-[60%] lg:w-[50%] flex flex-col items-center">
+        <Header />
+        <About />
+        <Experience />
         <button
           onClick={() => setDarkMode(!darkMode)}
-          className="px-4 py-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100">
+          className="px-4 py-2 mt-6 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100">
           Toggle Theme
         </button>
-        <div className=" fixed bottom-6">
-          {/* <Toggle></Toggle> */}
+        <div className="fixed bottom-6">
+          {/* <Toggle /> */}
         </div>
       </div>
-    </div>
+</div>
+
   );
 };
 

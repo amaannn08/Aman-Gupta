@@ -18,19 +18,19 @@ const Experience = () => {
     ]
     return (
         <div className='w-full flex flex-col mt-5'>
-            <h1 className='font-mono font-bold text-3xl'>Work Experience</h1>
+            <h1 className='font-mono font-bold text-xl md:text-3xl'>Work Experience</h1>
             {data.map((item)=>{
                 return (
                     <> 
                         <div className='flex flex-row gap-4 items-center my-2'>
-                            <a href={item.link}><img src={item.logo} alt="Logo :)" className='rounded-full cursor-pointer h-10'/></a>
+                            <a href={item.link}><img src={item.logo} alt="Logo :)" className='rounded-full cursor-pointer h-8 md:h-10'/></a>
                             <div className=' w-full flex justify-between cursor-pointer'>
                                 <div className='flex flex-col'>
-                                    <h1 className='font-mono font-bold text'>{item.company}</h1>
-                                    <h2 className='font-mono text-sm'>{item.role}</h2>
+                                    <h1 className='font-mono font-bold text-sm md:text'>{item.company}</h1>
+                                    <h2 className='font-mono text-xs md:text-sm'>{item.role}</h2>
                                 </div>
                                 <div>
-                                    <h1 className='font-mono text-sm dark:text-gray-400 pt-1'>{item.duration}</h1>
+                                    <h1 className='font-mono text-xs md:text-sm dark:text-gray-400 pt-1'>{item.duration}</h1>
                                 </div>
                             </div>
                         </div>

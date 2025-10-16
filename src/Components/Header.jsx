@@ -4,12 +4,12 @@ const Header = () => {
   return (
     <div className='mt-10 w-full flex items-center mb-8 justify-between'>
         <div className="flex flex-col items-start">
-          <h1 className="font-mono text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
+          <h1 className="font-mono text-xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
             Hey, I'm Aman
           </h1>
 
             <ReactTyped
-              className="font-mono text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-gray-300 mt-2"
+              className="font-mono text-sm  md:text-2xl text-gray-700 dark:text-gray-300 mt-2"
               strings={[
                 "Software Engineer",
                 "CP Enthusiast",
@@ -26,8 +26,8 @@ const Header = () => {
             </h1>
         </div>
 
-        <div>
-            <img src="/aman.jpeg" className='h-24 p md:h-40 rounded-full ' alt="" />
+        <div className='flex flex-col justify-center items-center '>
+            <img src="/aman.jpeg" className='h-24 md:h-40 rounded-full ' alt="" />
         </div>
     </div>
   )
