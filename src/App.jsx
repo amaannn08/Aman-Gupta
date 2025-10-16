@@ -22,8 +22,8 @@ const App = () => {
   }, [darkMode]);
 
   return (
-    <div className="min-h-full w-full bg-white text-black dark:bg-gray-900 dark:text-white transition-all duration-300 flex justify-center">
-      <div className="w-[90%] md:w-[60%] lg:w-[50%] flex flex-col items-center">
+        <div className=" w-full  transition-all duration-300 flex justify-center">
+      <div className="w-full min-h-screen px-[5%] bg-white text-black dark:bg-gray-900 dark:text-white md:px-[20%] lg:px-[25%] flex flex-col items-center">
         <Header />
         <About />
         <Experience />
