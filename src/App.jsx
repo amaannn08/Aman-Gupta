@@ -30,7 +30,7 @@ const App = () => {
         <Education/>
         <Skills/>
         
-        <div className="fixed bottom-3">
+        <div className="fixed bottom-1">
           <div className='flex flex-row items-center justify-center px-4 py-3 rounded-full bg-white dark:bg-gray-800 border-gray-600 border'>
         <div className='flex flex-row items-center justify-center gap-3'>
           <House className="h-5 cursor-pointer"/>
