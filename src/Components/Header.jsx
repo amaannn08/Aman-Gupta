@@ -27,7 +27,7 @@ const Header = () => {
         </div>
 
         <div>
-            <img src="./images/aman.jpeg" className='h-24 p md:h-40 rounded-full ' alt="" />
+            <img src="/aman.jpeg" className='h-24 p md:h-40 rounded-full ' alt="" />
         </div>
     </div>
   )
