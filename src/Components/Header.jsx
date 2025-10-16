@@ -2,27 +2,32 @@ import React from 'react'
 import { ReactTyped } from "react-typed";
 const Header = () => {
   return (
-    <div className='flex items-center gap-5'>
-        <div className='flex flex-col'>
-            <h1 className='font-mono text-2xl font-bold'>Hey, I'm Aman</h1>
+    <div className='mt-10 flex items-center '>
+        <div className="flex flex-col items-start px-4 py-6 md:px-12 md:py-12">
+          <h1 className="font-mono text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
+            Hey, I'm Aman
+          </h1>
+
             <ReactTyped
-              className='font-mono text'
+              className="font-mono text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-gray-300 mt-2"
               strings={[
                 "Software Engineer",
                 "CP Enthusiast",
                 "Problem Solver",
-                "Full Stack",
+                "Full Stack Dev",
               ]}
               typeSpeed={60}
               backSpeed={40}
               loop
-              >
-            </ReactTyped>
-            <hr className=' border-t border-black dark:border-white mt-1 mb-1'/>
-        <h1 className='font-mono text-xs mx-2'>BS-MS - IIT Kharagpur</h1>
+            />
+            <hr className="border-t border-gray-900 dark:border-white mt-3 mb-3 w-full md:w-full" />
+            <h1 className="font-mono text-xs sm:text-sm md:text-xl text-gray-600 dark:text-gray-300 mx-0" >
+              BS-MS - IIT Kharagpur
+            </h1>
         </div>
+
         <div>
-            <img src="./images/aman.jpeg" className='h-16 rounded-full ' alt="" />
+            <img src="./images/aman.jpeg" className='h-24 p md:h-40 rounded-full ' alt="" />
         </div>
     </div>
   )
