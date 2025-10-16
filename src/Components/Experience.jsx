@@ -23,7 +23,7 @@ const Experience = () => {
                 return (
                     <> 
                         <div className='flex flex-row gap-4 items-center my-2'>
-                            <a href={item.link}><img src={item.logo} alt="Logo :)" className='rounded-full cursor-pointer h-8 w-10 md:h-10 md:w-12'/></a>
+                            <a href={item.link}><img src={item.logo} alt="Logo :)" className='rounded-full cursor-pointer border-gray-300 border h-8 w-10 md:h-10 md:w-12'/></a>
                             <div className=' w-full flex justify-between cursor-pointer'>
                                 <div className='flex flex-col'>
                                     <h1 className='font-mono font-bold text-sm md:text'>{item.company}</h1>

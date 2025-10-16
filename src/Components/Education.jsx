@@ -7,13 +7,13 @@ const Education = () => {
             logo:"/iitkgp.png",
             course:"BS-MS Exploration Geophysics",
             duration:"2022 - 2027",
-            link:"https://zafo.ai/"
+            link:"https://www.iitkgp.ac.in/"
         },{
             college:"Sikkim Manipal Institute of Technology",
             logo:"/smit.jpeg",
             course:"BTech Computer Science & Engineering",
             duration:"2021 - 2022",
-            link:"https://zafo.ai/"
+            link:"https://smu.edu.in/smit/"
         }
     ]
     return (
@@ -23,7 +23,7 @@ const Education = () => {
                 return (
                     <> 
                         <div className='flex flex-row gap-4 items-center my-2'>
-                            <a href={item.link}><img src={item.logo} alt="Logo :)" className='rounded-full cursor-pointer h-8 w-10 md:h-10 md:w-12'/></a>
+                            <a href={item.link}><img src={item.logo} alt="Logo :)" className='rounded-full cursor-pointer border-gray-300 border h-8 w-10 md:h-10 md:w-12'/></a>
                             <div className=' w-full flex justify-between cursor-pointer'>
                                 <div className='w-full justify-center flex flex-col'>
                                     <h1 className='font-mono font-bold text-sm md:text'>{item.college}</h1>
