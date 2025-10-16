@@ -31,7 +31,7 @@ const App = () => {
           Toggle Theme
         </button>
         <div className=" fixed bottom-6">
-          <Toggle></Toggle>
+          {/* <Toggle></Toggle> */}
         </div>
       </div>
     </div>

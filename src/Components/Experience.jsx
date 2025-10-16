@@ -4,13 +4,13 @@ const Experience = () => {
     const data=[
         {
             company:"Zafo Technologies",
-            logo:"./images/zafo.jpeg",
+            logo:"/zafo.jpeg",
             role:"Full Stack Engineer",
             duration:"May 2025 - Jun 2025",
             link:"https://zafo.ai/"
         },{
             company:"Bhaasha.in",
-            logo:"./images/bhaasha.jpeg",
+            logo:"/bhaasha.jpeg",
             role:"Frontend Engineer",
             duration:"Mar 2025 - Apr 2025",
             link:"https://www.bhaasha.in/"
