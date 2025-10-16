@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import Toggle from "./Components/Toggle";
 import About from "./Components/About";
 import Experience from "./Components/Experience";
+import Education from "./Components/Education";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(
@@ -25,6 +26,7 @@ const App = () => {
         <Header />
         <About />
         <Experience />
+        <Education/>
         <button
           onClick={() => setDarkMode(!darkMode)}
           className="px-4 py-2 mt-6 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100">
