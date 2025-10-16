@@ -2,8 +2,8 @@ import React from 'react'
 import { ReactTyped } from "react-typed";
 const Header = () => {
   return (
-    <div className='mt-10 flex items-center '>
-        <div className="flex flex-col items-start px-4 py-6 md:px-12 md:py-12">
+    <div className='mt-10 w-full flex items-center mb-8 justify-between'>
+        <div className="flex flex-col items-start">
           <h1 className="font-mono text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
             Hey, I'm Aman
           </h1>
