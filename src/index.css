@@ -2,13 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    background-color: white;
-    color: black; /* optional: set text color for light mode */
-}
-
-/* Dark mode */
-body.dark {
-    background-color: #111827; /* Tailwind gray-900 */
-    color: white; /* optional: text color for dark mode */
+*{
+    padding: 0;
+    margin: 0;
 }
