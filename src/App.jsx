@@ -6,7 +6,6 @@ import Experience from "./Components/Experience";
 import Education from "./Components/Education";
 import Skills from "./Components/Skills";
 import Achievements from "./Components/Achievements";
-import { BrowserRouter,Routes,Route,Link } from "react-router-dom";
 
 
 const App = () => {
@@ -45,7 +44,6 @@ const App = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <BrowserRouter>
         <div className=" w-full  transition-all duration-300 flex justify-center">
           <div className="w-full min-h-screen px-[5%] bg-white text-black dark:bg-gray-900 dark:text-white md:px-[20%] lg:px-[25%] flex flex-col items-center">
             <div ref={homeRef} className="w-full"><Header /></div>
@@ -79,7 +77,7 @@ const App = () => {
                       <button key={id} onClick={()=>{
                         setProfile(id)
                       }}
-                      className={`p-1 cursor-pointer transition-all ${
+                      className={`px-2 py-2 cursor-pointer transition-all ${
                           profile === id
                             ? "bg-gray-300 dark:bg-gray-700  rounded-full"
                             : "hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full"
@@ -100,7 +98,6 @@ const App = () => {
             </div>
           </div>
       </div>
-    </BrowserRouter>
   );
 };
 
