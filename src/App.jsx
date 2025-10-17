@@ -5,12 +5,26 @@ import About from "./Components/About";
 import Experience from "./Components/Experience";
 import Education from "./Components/Education";
 import Skills from "./Components/Skills";
+import Achievements from "./Components/Achievements";
 
 const App = () => {
+  const [selected,setSelected]=useState("");
+  const [profile,setProfile]=useState("");
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("theme") === "dark"
   );
-
+  
+  const icons = [
+    { id: "home", Icon: House ,link:""},
+    { id: "notebook", Icon: Notebook ,link:""},
+    { id: "code", Icon: Code ,link:""},
+    { id: "pen", Icon: PenLine ,link:""}
+  ];
+  const profiles=[
+    {id:"github",Icon:Github,link:"https://github.com/amaannn08"},
+    {id:"linkedin",Icon:Linkedin,link:"https://www.linkedin.com/in/aman-gupta-134ab4230/"},
+    {id:"twitter",Icon:Twitter,link:"https://x.com/Amaannn08"},
+  ];
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
@@ -26,25 +40,45 @@ const App = () => {
       <div className="w-full min-h-screen px-[5%] bg-white text-black dark:bg-gray-900 dark:text-white md:px-[20%] lg:px-[25%] flex flex-col items-center">
         <Header />
         <About />
+        <Achievements/>
         <Experience />
         <Education/>
         <Skills/>
         
         <div className="fixed bottom-3">
-          <div className='flex flex-row items-center justify-center px-4 py-3 rounded-full bg-white dark:bg-gray-800 border-gray-600 border'>
-        <div className='flex flex-row items-center justify-center gap-3'>
-          <House className="h-5 cursor-pointer"/>
-          <Notebook className="h-5 cursor-pointer"/>
-          <Code className="h-5 cursor-pointer"/>
-          <PenLine className="h-5 cursor-pointer"/>
+          <div className='flex flex-row items-center justify-center px-4 py-3 my-3 rounded-full bg-white dark:bg-gray-800 border-gray-600 border'>
+        <div className='flex flex-row items-center justify-center '>
+          {icons.map(({ id, Icon }) => (
+            <button key={id} 
+            className={`px-2 py-2 cursor-pointer transition-all ${
+                  selected === id
+                    ? "bg-gray-300 dark:bg-gray-700  rounded-full"
+                    : "hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full"
+                }`} onClick={() => setSelected(id)}>
+              <Icon
+                className={`h-5 `}
+              />
+            </button>
+          ))}
         </div>
 
         <h1 className='font-mono text-black dark:text-white mx-2'>|</h1>
 
         <div className='flex flex-row items-center justify-center gap-3'>
-          <Github className="h-5 cursor-pointer"/>
-          <Linkedin className="h-5 cursor-pointer"/>
-          <Twitter className="h-5 cursor-pointer"/>
+          {profiles.map(({id,Icon,link})=>(
+            <a href={link}>
+              <button key={id} onClick={()=>{
+                setProfile(id)
+              }}
+              className={`p-1 cursor-pointer transition-all ${
+                  profile === id
+                    ? "bg-gray-300 dark:bg-gray-700  rounded-full"
+                    : "hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full"
+                }`}>
+                  <Icon className="h-5"/>
+              </button>
+            </a>
+          ))}
         </div>
         <h1 className='font-mono text-black dark:text-white mx-2'>|</h1>
         <button
