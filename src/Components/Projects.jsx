@@ -1,5 +1,5 @@
 import React from 'react'
-import { SmilePlus } from 'lucide-react'
+import { Github, SmilePlus } from 'lucide-react'
 const Projects = () => {
     const info = [
   {
@@ -14,21 +14,21 @@ const Projects = () => {
     duration: "Mar 2025 - Apr 2025",
     info: "A full-stack portal that streamlines policy management and secures agent data.",
     skills: ["React", "Node.js", "Express.js", "MongoDB", "JWT Authentication", "REST APIs", "Frontend & Backend Integration", "Admin Dashboard", "CRUD Operations"],
-    link: ""
+    link: "https://github.com/amaannn08/LIC-APP"
   },
   {
     heading: "Employee Management System",
     duration: "Feb 2025 - Mar 2025",
     info: "A role-based EMS dashboard improving task assignment and code modularity.",
     skills: ["React.js", "Context API", "Frontend Development", "Modular Architecture", "State Management", "Dashboard Development", "Code Reusability"],
-    link: ""
+    link: "https://github.com/amaannn08/EMS"
   },
   {
     heading: "2048 Game",
     duration: "Nov 2024 - Dec 2024",
     info: "A C++ implementation of 2048 with dynamic memory management and intelligent tile placement.",
     skills: ["C++", "OOP", "Data Structures", "Algorithms", "Game Development", "Dynamic Memory Management", "Random Number Generation"],
-    link: ""
+    link: "https://github.com/amaannn08/2048"
   }
 ];
 
@@ -52,10 +52,20 @@ const Projects = () => {
                                 </div>
                             ))}        
                         </div>
-                        <div className='flex'>
-                            <div className='flex flex-row bg-purple-600 justify-start    items-center gap-1 p-1 rounded-md cursor-pointer'>
-                                <SmilePlus className='h-5 w-5 text-white'/>
-                                <h1 className='font-sans text-white font-bold'>Website</h1>
+                        <div className='flex flex-row gap-2'>
+                            <div className='flex'>
+                                <div className='flex flex-row bg-purple-600 justify-start    items-center gap-1 p-1 rounded-md cursor-pointer'>
+                                    <SmilePlus className='h-5 w-5 text-white'/>
+                                    <h1 className='font-sans text-white font-bold'>Website</h1>
+                                </div>
+                            </div>
+                            <div className='flex'>
+                                <a href={input.link}>
+                                    <div className='flex flex-row bg-purple-600 justify-start    items-center gap-1 p-1 rounded-md cursor-pointer'>
+                                    <Github className='h-5 w-5 text-white'/>
+                                    <h1 className='font-sans text-white font-bold'>Link</h1>
+                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>

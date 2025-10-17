@@ -1,15 +1,18 @@
 import React, { useState, useEffect ,useRef } from "react";
-import { House ,Briefcase,CircleUserRound, Notebook , Code , Github, Linkedin, Twitter, Sun, MoonStar ,} from 'lucide-react';
+import { House ,Briefcase,CircleUserRound, Notebook , Code , Github, Linkedin, Twitter, Sun, MoonStar, Contact ,} from 'lucide-react';
 import Header from "./Components/Header";
 import About from "./Components/About";
 import Experience from "./Components/Experience";
 import Education from "./Components/Education";
 import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
-
+import ContactMe from "./Components/ContactMe";
+import { motion,useScroll } from "motion/react"
 
 
 const App = () => {
+  const scrollProgress=useScroll().scrollYProgress;
+  console.log(scrollProgress);
   const [selected,setSelected]=useState("");
   const [profile,setProfile]=useState("");
   const [darkMode, setDarkMode] = useState(
@@ -23,7 +26,7 @@ const App = () => {
     { id: "home", Icon: House, ref: homeRef },
     { id: "briefcase", Icon: Briefcase, ref: experienceRef },
     { id: "code", Icon: Code, ref: projectsRef },
-    { id: "circleUser", Icon: CircleUserRound, ref: aboutRef },
+    { id: "circleUser", Icon: Contact, ref: aboutRef },
   ];
   const profiles=[
     {id:"github",Icon:Github,link:"https://github.com/amaannn08"},
@@ -45,14 +48,22 @@ const App = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-        <div className=" w-full  transition-all duration-300 flex justify-center">
+        <div>
+          <motion.div 
+          style={{
+            scaleX:scrollProgress
+          }}
+          className="bg-white origin-left rounded-full w-full h-1 top-0 left-0 fixed"></motion.div>
+          <div className=" w-full  transition-all duration-300 flex justify-center">
           <div className="w-full min-h-screen px-[5%] bg-white text-black dark:bg-gray-900 dark:text-white md:px-[20%] lg:px-[25%] flex flex-col items-center">
+            
             <div ref={homeRef} className="w-full"><Header /></div>
-            <div ref={aboutRef} className="w-full"><About /></div>
+            <div  className="w-full"><About /></div>
             <div ref={experienceRef} className="w-full"><Experience /></div>
             <div className="w-full"><Education /></div>
             <div className="w-full"><Skills /></div>
-            <div ref={projectsRef} className="w-full mb-4"><Projects /></div>
+            <div ref={projectsRef} className="w-full"><Projects /></div>
+            <div ref={aboutRef} className="mt-4 mb-20"><ContactMe/></div>
 
             <div className="fixed bottom-3">
               <div className='flex flex-row items-center justify-center px-3 py-3 mx-3 rounded-full bg-white dark:bg-gray-800 border-gray-600 border'>
@@ -100,6 +111,7 @@ const App = () => {
             </div>
           </div>
       </div>
+        </div>
   );
 };
 
