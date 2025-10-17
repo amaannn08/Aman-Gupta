@@ -5,7 +5,8 @@ import About from "./Components/About";
 import Experience from "./Components/Experience";
 import Education from "./Components/Education";
 import Skills from "./Components/Skills";
-import Achievements from "./Components/Achievements";
+import Projects from "./Components/Projects";
+
 
 
 const App = () => {
@@ -51,9 +52,10 @@ const App = () => {
             <div ref={experienceRef} className="w-full"><Experience /></div>
             <div className="w-full"><Education /></div>
             <div className="w-full"><Skills /></div>
+            <div ref={projectsRef} className="w-full mb-4"><Projects /></div>
 
             <div className="fixed bottom-3">
-              <div className='flex flex-row items-center justify-center px-4 py-3 my-3 rounded-full bg-white dark:bg-gray-800 border-gray-600 border'>
+              <div className='flex flex-row items-center justify-center px-3 py-3 mx-3 rounded-full bg-white dark:bg-gray-800 border-gray-600 border'>
                 <div className='flex flex-row items-center justify-center '>
                   {icons.map(({ id, Icon ,ref }) => (
                       <button key={id} 
@@ -71,7 +73,7 @@ const App = () => {
 
                 <h1 className='font-mono text-black dark:text-white mx-2'>|</h1>
 
-                <div className='flex flex-row items-center justify-center gap-3'>
+                <div className='flex flex-row items-center justify-center '>
                   {profiles.map(({id,Icon,link})=>(
                     <a href={link}>
                       <button key={id} onClick={()=>{
