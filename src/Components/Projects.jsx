@@ -1,5 +1,6 @@
 import React from 'react'
 import { Github, SmilePlus } from 'lucide-react'
+import { a } from 'motion/react-client';
 const Projects = () => {
     const info = [
   {
@@ -7,7 +8,8 @@ const Projects = () => {
     duration: "May 2025 - Jun 2025",
     info: "A smart note management system that speeds up retrieval, secures data, and links notes dynamically.",
     skills: ["React", "Node.js", "Express.js", "MongoDB", "TypeScript", "REST APIs", "CSS", "Tailwind", "JWT Authentication", "Dynamic Linking", "Search & Filtering"],
-    link: ""
+    link: "",
+    website:""
   },
   {
     heading: "LIC Agent Management",
@@ -15,13 +17,15 @@ const Projects = () => {
     info: "A full-stack portal that streamlines policy management and secures agent data.",
     skills: ["React", "Node.js", "Express.js", "MongoDB", "JWT Authentication", "REST APIs", "Frontend & Backend Integration", "Admin Dashboard", "CRUD Operations"],
     link: "https://github.com/amaannn08/LIC-APP"
-  },
+    ,website:"https://lic-app-eight.vercel.app/login"
+},
   {
     heading: "Employee Management System",
     duration: "Feb 2025 - Mar 2025",
     info: "A role-based EMS dashboard improving task assignment and code modularity.",
     skills: ["React.js", "Context API", "Frontend Development", "Modular Architecture", "State Management", "Dashboard Development", "Code Reusability"],
     link: "https://github.com/amaannn08/EMS"
+    ,website:""
   },
   {
     heading: "2048 Game",
@@ -29,6 +33,7 @@ const Projects = () => {
     info: "A C++ implementation of 2048 with dynamic memory management and intelligent tile placement.",
     skills: ["C++", "OOP", "Data Structures", "Algorithms", "Game Development", "Dynamic Memory Management", "Random Number Generation"],
     link: "https://github.com/amaannn08/2048"
+    ,website:""
   }
 ];
 
@@ -54,18 +59,14 @@ const Projects = () => {
                         </div>
                         <div className='flex flex-row gap-2'>
                             <div className='flex'>
-                                <div className='flex flex-row bg-purple-600 justify-start    items-center gap-1 p-1 rounded-md cursor-pointer'>
-                                    <SmilePlus className='h-5 w-5 text-white'/>
-                                    <h1 className='font-sans text-white font-bold'>Website</h1>
-                                </div>
+                                {input.website.length>0 && (
+                                    <a href={input.website}><WebsiteIcon/></a>
+                                )}
                             </div>
                             <div className='flex'>
-                                <a href={input.link}>
-                                    <div className='flex flex-row bg-purple-600 justify-start    items-center gap-1 p-1 rounded-md cursor-pointer'>
-                                    <Github className='h-5 w-5 text-white'/>
-                                    <h1 className='font-sans text-white font-bold'>Link</h1>
-                                </div>
-                                </a>
+                                {input.link.length>0 && (
+                                    <a href={input.link}><GithubLink/></a>
+                                )}
                             </div>
                         </div>
                     </div>
@@ -74,5 +75,20 @@ const Projects = () => {
         </div>
     )
 }
-
+function GithubLink(){
+    return(
+        <div className='flex flex-row bg-purple-600 justify-start    items-center gap-1 p-1 rounded-md cursor-pointer'>
+            <Github className='h-5 w-5 text-white'/>
+            <h1 className='font-sans text-white font-bold'>Link</h1>
+        </div>
+    )
+}
+function WebsiteIcon(){
+    return(
+        <div className='flex flex-row bg-purple-600 justify-start    items-center gap-1 p-1 rounded-md cursor-pointer'>
+            <SmilePlus className='h-5 w-5 text-white'/>
+            <h1 className='font-sans text-white font-bold'>Website</h1>
+        </div>
+    )
+}
 export default Projects
