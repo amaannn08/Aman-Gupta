@@ -4,15 +4,15 @@ import { a } from 'motion/react-client';
 const Projects = () => {
     const info = [
   {
-    heading: "Second Brain App",
-    duration: "May 2025 - Jun 2025",
-    info: "A smart note management system that speeds up retrieval, secures data, and links notes dynamically.",
-    skills: ["React", "Node.js", "Express.js", "MongoDB", "TypeScript", "REST APIs", "CSS", "Tailwind", "JWT Authentication", "Dynamic Linking", "Search & Filtering"],
-    link: "",
+    heading: "TripTales",
+    duration: "Nov 2025 - Dec 2025",
+    info: "TripTales is a community-driven travel platform where people share real experiences, tips, itineraries, and stories On top of that, an AI travel guide helps users explore destinations",
+    skills: ["React", "Node.js", "Express.js", "MongoDB", "TypeScript", "Vector Databases" ,"RAG", "REST APIs", "CSS", "Tailwind", "JWT Authentication", "Bcrypt"],
+    link: "https://github.com/amaannn08/Trip-Tales",
     website:""
   },
   {
-    heading: "LIC Agent Management",
+    heading: "Agent Management System",
     duration: "Mar 2025 - Apr 2025",
     info: "A full-stack portal that streamlines policy management and secures agent data.",
     skills: ["React", "Node.js", "Express.js", "MongoDB", "JWT Authentication", "REST APIs", "Frontend & Backend Integration", "Admin Dashboard", "CRUD Operations"],
