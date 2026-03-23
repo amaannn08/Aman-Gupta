@@ -1,8 +1,29 @@
 import React from 'react'
 
 const Skills = () => {
-    const skills = ["C++", "JavaScript", "TypeScript","Node.js" ,"React", "HTML", "CSS","REST Api" , "Express.js", "Tailwind CSS" ,"MongoDB", "Python", "C" ,"Git & Github" , "Zod", "Figma","JWT" ,"Bcrypt"];
-
+    const skills = [
+        // Core Programming
+        "C++", "JavaScript", "TypeScript", "Python", "C",
+      
+        // Backend & APIs
+        "Node.js", "Express.js", "FastAPI", "REST API",
+      
+        // Databases
+        "PostgreSQL", "MongoDB", "Vector Databases",
+      
+        // Frontend
+        "React", "HTML", "CSS", "Tailwind CSS",
+      
+        // DevOps & Deployment
+        "AWS", "CI/CD", "Git & GitHub",
+      
+        // Auth & Validation
+        "JWT", "Bcrypt", "Zod",
+      
+        // AI / Advanced
+        "RAG Pipelines" ,"N8N" ,"Agentic AI" ,
+        "Figma"
+      ];
     return (
         <div>
             <h1 className='mt-4 font-mono font-bold text-xl md:text-3xl'>Skills</h1>

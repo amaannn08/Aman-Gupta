@@ -3,6 +3,22 @@ import React from 'react'
 const Experience = () => {
     const data=[
         {
+            company:"WEH Ventures",
+            logo:"/weh.svg",
+            role:"Software Engineering Intern",
+            duration:"Mar 2026 - Present",
+            link:"https://wehventures.com/"
+        }
+        ,
+        {
+            company:"RetaiLabs",
+            logo:"/retailabs.png",
+            role:"Software Engineering Intern (Agentic AI)",
+            duration:"Jan 2026 - Feb 2026",
+            link:"https://retailabs.in/"
+        }
+        ,
+        {
             company:"Zafo Technologies",
             logo:"/zafo.jpeg",
             role:"Full Stack Engineer",
