@@ -15,7 +15,7 @@ const Maincontent = () => {
   const [selected,setSelected]=useState("");
   const [profile,setProfile]=useState("");
   const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("theme") === "dark"
+    localStorage.getItem("theme") !== "light"
   );
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
