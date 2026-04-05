@@ -1,13 +1,29 @@
-import React from 'react'
+import React from 'react';
+import { motion } from 'motion/react';
+import { UserCircle } from 'lucide-react';
 
 const About = () => {
   return (
-    <div className='flex flex-col'>
-        <h1 className='font-mono font-bold text-xl md:text-3xl mb-2'>About</h1>
-        <h1 className='font-mono md:text text-gray-700 dark:text-gray-400'>I’m Aman, an undergrad at IIT Kharagpur with a passion for <b>Technology</b>, <b>Software Development</b> , and <b>Problem Solving</b>. <br />  I love building <b>projects</b> <i>(Fast)</i> that combine <b>Creativity</b> and <b>Code</b>, whether it’s interactive web apps, small tools, or exploring new frameworks <br /> </h1>
-
-    </div>
+    <motion.section 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5 }}
+      className='w-full flex flex-col mb-12'
+    >
+        <div className='flex items-center gap-3 mb-5'>
+          <UserCircle className="text-purple-600 dark:text-purple-400" size={28} />
+          <h2 className='font-sans font-bold text-2xl md:text-3xl text-gray-900 dark:text-white'>About Me</h2>
+        </div>
+        
+        <div className='bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 p-5 md:p-7 rounded-3xl shadow-sm hover:shadow-md transition-shadow'>
+          <p className='font-sans text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed'>
+            I’m Aman, a <span className='font-semibold text-purple-600 dark:text-purple-400'>Backend & AI Systems Engineer</span> from IIT Kharagpur. I build AI-powered products and scalable backend systems, mostly working with RAG pipelines, vector databases, and APIs that actually ship.<br/><br/>
+            I'm deeply into <span className='font-semibold text-gray-900 dark:text-white'>AI-native products</span> (not just wrappers), <span className='font-semibold text-gray-900 dark:text-white'>backend systems that scale</span>, and the intersection of <span className='font-semibold text-gray-900 dark:text-white'>Tech × Finance</span>. Currently, my focus is wrapped around building production-ready AI systems and exploring robust, deeper backend architecture.
+          </p>
+        </div>
+    </motion.section>
   )
 }
 
-export default About
+export default About;
