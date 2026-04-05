@@ -27,7 +27,7 @@ const Header = () => {
         </div>
 
         <div className='flex flex-col justify-center items-center '>
-            <img src="/aman.jpeg" className='h-24 md:h-40 rounded-full ' alt="" />
+            <img src="/aman.png" className='h-24 md:h-40 rounded-full ' alt="" />
         </div>
     </div>
   )
