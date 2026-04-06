@@ -10,12 +10,6 @@ const Education = () => {
             course:"BS-MS Exploration Geophysics",
             duration:"2022 - 2027",
             link:"https://www.iitkgp.ac.in/"
-        },{
-            college:"Sikkim Manipal Institute of Technology",
-            logo:"/smit.jpeg",
-            course:"BTech Computer Science & Engineering",
-            duration:"2021 - 2022",
-            link:"https://smu.edu.in/smit/"
         }
     ]
 
