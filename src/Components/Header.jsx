@@ -20,7 +20,7 @@ const Header = () => {
             👋 Welcome to my space
           </motion.div>
           <h1 className="font-sans text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400 tracking-tight leading-tight">
-            Hey, I'm Aman
+            <a href="https://drive.google.com/drive/folders/1KrYH2DHKth2DLR0w50SMQ68EIEOgCYU7?usp=sharing">Hey, I'm Aman</a>
           </h1>
 
             <ReactTyped
